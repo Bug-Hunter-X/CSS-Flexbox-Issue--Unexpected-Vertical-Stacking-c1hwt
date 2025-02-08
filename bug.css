@@ -1,0 +1,17 @@
+The following CSS code snippet is causing unexpected behavior in the rendering of my web page.  The `.container` class is not responding to the `display: flex;` property, and elements within the container are stacking vertically instead of horizontally. 
+
+```css
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.item {
+  background-color: lightblue;
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+}
+```
+
+I've inspected the HTML structure and ensured that the elements are properly nested within the `.container` element. However, the expected horizontal alignment is not achieved. 
