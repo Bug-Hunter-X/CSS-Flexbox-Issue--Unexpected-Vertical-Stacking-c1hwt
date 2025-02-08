@@ -1,0 +1,20 @@
+The problem was caused by an unintended conflict with other CSS properties and a misunderstanding of how flexbox works. The solution lies in understanding how the `width` property interacts with `display: flex` and removing any conflicting rules.
+
+Here's the corrected CSS code:
+
+```css
+.container {
+  display: flex;
+  width: 100%; /* Ensure container takes full width */
+}
+
+.item {
+  background-color: lightblue;
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  flex-shrink: 0; /* Prevent items from shrinking below their minimum width */
+}
+```
+
+By explicitly setting the `width` of the container and adding `flex-shrink: 0` to the `.item` class, the elements are now correctly aligned horizontally. This ensures that the flex items maintain their minimum size and don't shrink to zero width causing the vertical stacking.
